@@ -26,26 +26,26 @@ if args.dataset_type=="bank":
     df_results_csv["predicted_intent1"].replace(2,'Renseignements', inplace=True)
     df_results_csv["predicted_intent1"].replace(3,'Simulation/Comparaison', inplace=True)
     df_results_csv["predicted_intent1"].replace(4,'Spécificités Produit', inplace=True)
-
+'''
     df_results_csv["predicted_intent2"].replace(0,'Informations', inplace=True)
     df_results_csv["predicted_intent2"].replace(1,'Qualitatif', inplace=True)
     df_results_csv["predicted_intent2"].replace(2,'Renseignements', inplace=True)
     df_results_csv["predicted_intent2"].replace(3,'Simulation/Comparaison', inplace=True)
     df_results_csv["predicted_intent2"].replace(4,'Spécificités Produit', inplace=True)
-
+'''
 if args.dataset_type=="assurance":
     df_results_csv["predicted_intent1"].replace(0,'Comparateur / Simulation', inplace=True)
     df_results_csv["predicted_intent1"].replace(1,'Information', inplace=True)
     df_results_csv["predicted_intent1"].replace(2,'Qualitatif', inplace=True)
     df_results_csv["predicted_intent1"].replace(3,'Renseignements', inplace=True)
     df_results_csv["predicted_intent1"].replace(4,'Spécificité Produit', inplace=True)
-
+'''
     df_results_csv["predicted_intent2"].replace(0,'Comparateur / Simulation', inplace=True)
     df_results_csv["predicted_intent2"].replace(1,'Information', inplace=True)
     df_results_csv["predicted_intent2"].replace(2,'Qualitatif', inplace=True)
     df_results_csv["predicted_intent2"].replace(3,'Renseignements', inplace=True)
     df_results_csv["predicted_intent2"].replace(4,'Spécificité Produit', inplace=True)
-
+'''
 df_results_csv.to_csv('bert_output/result_'+args.dataset_type+'.csv',sep=",",index=None)
 
 
