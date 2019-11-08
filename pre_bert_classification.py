@@ -2,9 +2,16 @@
 # Converting input datasets including train, dev, and test to
 # a format acceptable for the BERT algorithm.
 # ####################################
-#  
+#             our data format(.csv)   
+#-------------------------------------
+# |   intent   |    query    |
+#-------------------------------------
+# ####################################
+#         bert input data format (.tsv)   
+#-------------------------------------
+# |    id     |   intent   |     alpha    |    query    |
+#-------------------------------------
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from pandas import DataFrame
 import argparse

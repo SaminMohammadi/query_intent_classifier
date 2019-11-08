@@ -12,7 +12,7 @@ args = parser.parse_args()
 
 df_test = pd.read_csv("data/test.tsv",sep="\t")
 
-df_results = pd.read_csv("bert_output_boursorama/test_results.tsv",sep="\t",header=None)
+df_results = pd.read_csv("bert_output/test_results.tsv",sep="\t",header=None)
 
 df_results_csv = pd.DataFrame({'id':df_test.iloc[:,0],
                                #'real_intent': df_test.iloc[0:, 1],
@@ -46,7 +46,7 @@ if args.dataset_type=="assurance":
     df_results_csv["predicted_intent2"].replace(3,'Renseignements', inplace=True)
     df_results_csv["predicted_intent2"].replace(4,'Spécificité Produit', inplace=True)
 
-df_results_csv.to_csv('bert_output_boursorama/result_'+args.dataset_type+'.csv',sep=",",index=None)
+df_results_csv.to_csv('bert_output/result_'+args.dataset_type+'.csv',sep=",",index=None)
 
 
 
